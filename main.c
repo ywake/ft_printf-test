@@ -527,6 +527,18 @@ void test_p(void)
 	printf("(i = %d)\n", i);
 	i = ft_printf("ft : [%.20p]", NULL);
 	printf("(i = %d)\n\n", i);
+	// =============
+	printf(BOLD"printf([%%0p], NULL)"RESET"\n");
+	i = printf("org: [%0p]", NULL);
+	printf("(i = %d)\n", i);
+	i = ft_printf("ft : [%0p]", NULL);
+	printf("(i = %d)\n\n", i);
+	// =============
+	printf(BOLD"printf([%%.0p], NULL)"RESET"\n");
+	i = printf("org: [%.0p]", NULL);
+	printf("(i = %d)\n", i);
+	i = ft_printf("ft : [%.0p]", NULL);
+	printf("(i = %d)\n\n", i);
 }
 
 void test_special(void)
